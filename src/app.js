@@ -46,10 +46,6 @@ function handleSubmit(event) {
     search(cityInputElement.value)
 }
 
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit);
-
 function displayFahrenheitTemperature (event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
@@ -67,6 +63,10 @@ function displayCelsiusTemperature (event) {
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
 };
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
 let celsiusTemperature = null;
 
