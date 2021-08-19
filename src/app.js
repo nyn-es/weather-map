@@ -23,7 +23,7 @@ function formatDay(timestamp) {
 
 
 function displayForecast(response) {
-    let forecast = response.data.daily;
+let forecast = response.data.daily;
 
 let forecastElement = document.querySelector("#forecast");
 
@@ -65,7 +65,6 @@ function displayTemperature(response) {
     let iconElement = document.querySelector("#icon");
 
     celsiusTemperature = response.data.main.temp;
-
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
     cityElement.innerHTML = response.data.name
     descriptionElement.innerHTML =response.data.weather[0].description;
